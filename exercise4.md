@@ -10,7 +10,7 @@ sequenceDiagram
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     Note right of server: The server executes /new_note and saves the note send by the browser
-    server->>browser: perform new HTTP GET
+    server->>browser: Code 302 redirect to /notes
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
